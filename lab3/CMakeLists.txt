@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project(exp3)
+add_executable(exp3 exp3.c)
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+target_link_libraries(exp3 ${CURSES_LIBRARIES} readline)
